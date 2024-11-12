@@ -11,7 +11,7 @@ namespace VGParkering
     {
         public void Menu(Parking parking, double pricePerMinute)
         {
-            Console.WriteLine("Tryck 'C' för att checka ut ett fordon.\nTryck valfri tangent för att fortsätta vänta.");
+            Console.WriteLine("Tryck 'C' för att checka ut ett fordon.\nTryck valfri tangent för att fortsätta vänta.\nTryck 'Q' för att avsluta.");
             ConsoleKeyInfo key = Console.ReadKey(true);
 
             switch (key.Key)
@@ -20,6 +20,9 @@ namespace VGParkering
                     Console.WriteLine("Skriv in Registreringsnumret ¨på fordonet som lämnar.");
                     string regNumLeaving = Console.ReadLine();
                     parking.UnparkVehicle(regNumLeaving, pricePerMinute);
+                    break;
+                case ConsoleKey.Q:
+                    Environment.Exit(0);
                     break;
             }
         }
