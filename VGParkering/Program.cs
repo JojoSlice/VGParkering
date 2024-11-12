@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             List<IVehicle> vehicles = new List<IVehicle>();
+            VehicleInfo info = new VehicleInfo();
             VehicleArrive vehicleArrive = new VehicleArrive();
             Parking parking = new Parking();
             CheckOut checkOut = new CheckOut();
@@ -30,7 +31,7 @@
                 int spot = parking.ParkVehicle(vehicles, vehicleIndex);
                 if (spot != -1)
                 {
-                    Console.WriteLine($"Fordon har parkerat på plats {spot + 1}: {vehicles[vehicleIndex].GetType().Name}");
+                    Console.WriteLine($"Fordon har parkerat på plats {spot + 1}: {info.Info(vehicles[vehicleIndex])}");
                     Console.WriteLine();
                 }
                 else
