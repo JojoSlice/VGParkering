@@ -11,6 +11,7 @@ namespace VGParkering
     {
         public void Menu(Parking parking, double pricePerMinute)
         {
+            Console.WriteLine();
             Console.WriteLine("Tryck 'C' för att checka ut ett fordon.\nTryck valfri tangent för att fortsätta vänta.\nTryck 'Q' för att avsluta.");
             ConsoleKeyInfo key = Console.ReadKey(true);
 
