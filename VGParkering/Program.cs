@@ -22,7 +22,7 @@
                 Console.Clear();
                 Console.WriteLine($"Den totala intäkten är: {earning} kr.");
                 Console.WriteLine();
-                Console.WriteLine($"Det har gått {time} minuter och en bil kommer.");
+                Console.WriteLine($"Det har gått {time} minuter och ett fordon kommer.");
                 Console.WriteLine();
 
                 vehicleArrive.GetVehicle(vehicles);
